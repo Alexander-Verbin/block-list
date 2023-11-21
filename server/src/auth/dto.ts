@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import { IsEmail, IsNotEmpty } from 'class-validator';
 
 export class SignUpBodyDto {
   @ApiProperty({
@@ -12,7 +12,6 @@ export class SignUpBodyDto {
     example: '1234',
   })
   @IsNotEmpty()
-  @IsString()
   password: string;
 }
 
@@ -26,7 +25,6 @@ export class SignInBodyDto {
     example: '1234',
   })
   @IsNotEmpty()
-  @IsString()
   password: string;
 }
 
